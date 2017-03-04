@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+html, body {
+	margin: 0;
+	padding: 0;
+}
+.box {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row; /* 该属性决定主轴的方向（即项目的排列方向） */
+	justify-content: center; /* 主轴/水平居中 */
+	align-items: center; /* 交叉轴/垂直居中 - 设置的时候，子项目没有高度，否则高度为容器高度相等 */
+	height: 200px;
+	background-color: #600;
+	color: #fff;
+}
+
+.box__div {
+	flex-grow: 1;
+	background-color: #000;
+	text-align: center;
+	/*align-self: flex-start;*/ /* 默认继承容器align-items，否则覆盖align-items */
+}
+
+.inline-box {
+	width: 100%;
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center; /* 设置的时候，子项目没有高度，否则高度为容器高度相等 */
+	height: 200px;
+	background-color: #0f0;
+	color: #fff;
+}
+
+.inline-box__span {
+	text-align: center;
+	background-color: #666;
+	/*line-height: 200px;*/
+}
